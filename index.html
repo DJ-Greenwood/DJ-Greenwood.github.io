@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Version: 1.0.0 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Denzil James Greenwood - Data Analyst | AI Enthusiast | Compliance Specialist Portfolio">
+    <meta name="keywords" content="Data Analyst, AI, Compliance, Portfolio, Data Science">
+    <meta property="og:title" content="Denzil James Greenwood - Portfolio">
+    <meta property="og:description" content="Data Analyst, AI Enthusiast, and Compliance Specialist Portfolio">
+    <meta property="og:image" content="https://DJ-Greenwood.github.io/DJ-Greenwood/profile_image.png">
+    <title>Denzil James Greenwood - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        header {
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.8);
+            z-index: 1;
+        }
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+        header p, header a {
+            position: relative;
+            z-index: 2;
+        }
+        header a {
+            transition: all 0.3s ease;
+        }
+        header a:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .nav-link {
+            color: white;
+            margin: 0 10px;
+        }
+        nav .nav-link.active {
+            color: #00bfff;
+        }
+        section {
+            padding: 40px 0;
+        }
+        section:nth-child(even) {
+            background: linear-gradient(to bottom, #f8f9fa, #e0e0e0);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .code-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background: #00bfff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .back-to-top:hover {
+            background: #007bff;
+        }
+        .modal-content img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background-image: url('https://DJ-Greenwood.github.io/DJ-Greenwood/data_science_background_image.png');">
+        <img src="https://DJ-Greenwood.github.io/DJ-Greenwood/profile_image.png" alt="Profile Image">
+        <h1>Denzil James Greenwood</h1>
+        <p>Data Analyst | AI Enthusiast | Compliance Specialist</p>
+        <a href="https://DJ-Greenwood.github.io/DJ-Greenwood/Denzil_James_Greenwood.pdf" class="btn btn-light btn-md mt-3">Download Resume</a>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#Professional Summary">Professional Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#data-analysis">Data Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#data-science">Data Science</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#links">Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Professional Summary Section -->
+    <section id="Professional Summary" class="bg-light">
+        <div class="container text-left">
+            <h2>Professional Summary</h2>
+            <p class="lead">Analytically driven and results-oriented Data Analyst with a comprehensive background in data analytics, project management, compliance, and a focus on Artificial Intelligence (AI) and Data Science. Highly proficient in a broad array of data analysis techniques and tools, with recent certifications in machine learning, AI, and data science. Demonstrated success in driving process improvements, optimizing operational efficiency, and influencing strategic business decisions through data-driven insights.</p>
+            <ul>
+                <li>Data Analysis: Proven expertise in using advanced data analysis techniques to drive decision-making.</li>
+                <li>Compliance Specialist: Extensive experience in ensuring regulatory adherence and audit readiness.</li>
+                <li>AI Enthusiast: Knowledgeable in machine learning models and AI implementation.</li>
+            </ul>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2 class="text-center">Skills</h2>
+        <div class="accordion" id="skillsAccordion">
+            <!-- Accordion Items -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Data Analysis & AI/ML Expertise
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#skillsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><i class="fas fa-code"></i> Programming Languages: Python (NumPy, Pandas, Flask, Scikit-Learn), R</li>
+                            <li><i class="fas fa-tools"></i> Development Tools: Jupyter, RStudio, GitHub, CI/CD (GitHub Actions), Data Pipelines</li>
+                            <li><i class="fas fa-chart-bar"></i> Data Visualization: Matplotlib, Seaborn, R Visualization, Dashboard Creation</li>
+                            <li><i class="fas fa-database"></i> Database Management: SQL, Data Mining, Database Administration</li>
+                            <li><i class="fas fa-chart-line"></i> Data Science & ML: Exploratory Data Analysis (EDA), Feature Engineering, Predictive Modeling, Statistical Analysis, Supervised/Unsupervised Learning, Neural Networks, Deep Learning (PyTorch)</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Project Management & Strategic Planning
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#skillsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><i class="fas fa-exclamation-triangle"></i> Risk Management: Expertise in risk identification, assessment, and mitigation strategies, with a track record of successful project delivery within scope, budget, and time constraints.</li>
+                            <li><i class="fas fa-comments"></i> Stakeholder Communication: Proven ability to maintain transparent and effective communication with stakeholders at all levels, ensuring alignment with project objectives and business goals.</li>
+                            <li><i class="fas fa-bullseye"></i> Strategic Planning: Demonstrated experience in developing and executing strategic plans that align with organizational goals, driving operational improvements and business growth.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Data Analysis Section -->
+<section id="data-analysis" class="bg-light">
+    <div class="container">
+        <h2 class="text-center">Data Analysis</h2>
+        <div class="accordion" id="projectsAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingProjectOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjectOne" aria-expanded="true" aria-controls="collapseProjectOne">
+                        An interactive visualization of global fertility trends using the World Fertility Data 2019 provided by the United Nations.
+                    </button>
+                </h2>
+                <div id="collapseProjectOne" class="accordion-collapse collapse show" aria-labelledby="headingProjectOne" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <img src="https://DJ-Greenwood.github.io/DJ-Greenwood/world_fertility_data.png" alt="Fertility Data Analysis Screenshot" class="img-fluid mb-3 w-25">
+                        <p>Introduction: Understanding global fertility trends is crucial for demographic research, policy-making, and socio-economic planning. This project provides an interactive map visualization of the World Fertility Data 2019, allowing users to explore age-specific fertility rates, total fertility rates, and mean age at childbearing across different countries and over time.</p>
+                        <p><strong>Technologies:</strong> Pandas, Geopandas, Ipyleaflet, Ipywidgets, and Matplotlib</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">An interactive visualization of global fertility trends using the World Fertility Data 2019</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://DJ-Greenwood.github.io/DJ-Greenwood/world_fertility_data.png" alt="Fertility Data Analysis Screenshot" class="img-fluid mb-3 w-25">
+                <p>Introduction: Understanding global fertility trends is crucial for demographic research, policy-making, and socio-economic planning. This project provides an interactive map visualization of the World Fertility Data 2019, allowing users to explore age-specific fertility rates, total fertility rates, and mean age at childbearing across different countries and over time.</p>
+                <p><strong>Technologies:</strong> Pandas, Geopandas, Ipyleaflet, Ipywidgets, and Matplotlib</p>
+                <a href="https://github.com/DJ-Greenwood/Data_visualization/tree/main" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Data Science Section -->
+<section id="data-science">
+    <div class="container">
+        <h2 class="text-center">Data Science Showcase</h2>
+        <div class="accordion" id="dataScienceAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="dataScienceHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataScience" aria-expanded="false" aria-controls="collapseDataScience">
+                        Machine Learning Model for Predictive Analytics
+                    </button>
+                </h2>
+                <div id="collapseDataScience" class="accordion-collapse collapse" aria-labelledby="dataScienceHeading" data-bs-parent="#dataScienceAccordion">
+                    <div class="accordion-body">
+                        <img src="https://DJ-Greenwood.github.io/DJ-Greenwood/home_loan.png" alt="Machine Learning Model Screenshot" class="img-fluid mb-3"> <!-- Added project screenshot -->
+                        <p>Used Python to create and evaluate machine learning models for predicting loan defaults. Presented visualizations that explained feature importance and model performance.</p>
+                        <div class="code-container">
+                            <h5>Partial Code Sample:</h5>
+                            <pre><code># Select features for the model
+selected_features = [
+    'loan_percent_income', 
+    'previous_loan_defaults_on_file', 
+    'loan_int_rate', 
+    'loan_amnt',
+    'person_income',
+    'credit_score',
+    'age_emp_ratio'
+]
+X = loan_data[selected_features]
+y = loan_data['loan_status']
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+# Scale numerical features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Random Forest Model
+rf_model = RandomForestClassifier(random_state=42)
+
+# Hyperparameter tuning with GridSearchCV
+param_grid = {
+    'n_estimators': [100, 200, 300],
+    'max_depth': [10, 20, 30],
+    'min_samples_split': [5, 10, 20],
+    'max_features': ['sqrt', 'log2']
+}
+
+grid_search = GridSearchCV(estimator=rf_model, param_grid=param_grid, cv=5, scoring='accuracy', verbose=1, n_jobs=-1)
+grid_search.fit(X_train_scaled, y_train)
+
+# Best model evaluation
+best_model = grid_search.best_estimator_
+y_pred = best_model.predict(X_test_scaled)
+
+print("Best Hyperparameters:", grid_search.best_params_)
+print("Accuracy on Test Set:", accuracy_score(y_test, y_pred))
+print("\nClassification Report:\n", classification_report(y_test, y_pred))
+                            </code></pre>
+                        </div>
+                        <p><strong>Results:</strong> Achieved 92% accuracy in predicting loan defaults, demonstrating the effectiveness of the RandomForest model for classification tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Professional Experience Section -->
+<section id="experience" class="bg-light">
+    <div class="container">
+        <h2 class="text-center">Professional Experience</h2>
+        <div class="accordion" id="experienceAccordion">
+            <!-- Experience Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="experienceHeadingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperienceOne" aria-expanded="false" aria-controls="collapseExperienceOne">
+                        Volunteer Project Manager, Self Employeed (2014 - 2024)
+                    </button>
+                </h2>
+                <div id="collapseExperienceOne" class="accordion-collapse collapse" aria-labelledby="experienceHeadingOne" data-bs-parent="#experienceAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Led and executed multiple home renovation projects, improving quality of life for occupants and managing resources effectively to meet project deadlines and budgets.</li>
+                            <li>Managed end-to-end project delivery for a General Contractor, successfully overcoming complex logistical and financial challenges to deliver high-quality results.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                            <!-- Experience Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="experienceHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperienceOne" aria-expanded="false" aria-controls="collapseExperienceOne">
+                        Implementation Support Supervisor, Chickasaw Nation (2013 - 2014)
+                    </button>
+                </h2>
+                <div id="collapseExperienceOne" class="accordion-collapse collapse" aria-labelledby="experienceHeadingOne" data-bs-parent="#experienceAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Spearheaded the successful adoption and implementation of enterprise projects, fostering interdepartmental collaboration and leveraging data analytics to track project progress and performance.</li>
+                            <li>Utilized data-driven insights to support decision-making processes, enabling the organization to achieve its strategic objectives and improve operational efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="experienceHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExperienceTwo" aria-expanded="false" aria-controls="collapseExperienceTwo">
+                        Compliance Specialist, Chickasaw Nation (2007 - 2013)
+                    </button>
+                </h2>
+                <div id="collapseExperienceTwo" class="accordion-collapse collapse" aria-labelledby="experienceHeadingTwo" data-bs-parent="#experienceAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Conducted comprehensive audits using advanced data analysis techniques to ensure compliance with regulatory standards and improve business processes.</li>
+                            <li>Developed and presented detailed reports and actionable recommendations to senior management, resulting in enhanced compliance and operational effectiveness.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="bg-light mt-4">
+    <div class="container">
+        <h2 class="text-center">Education</h2>
+        <div class="accordion" id="educationAccordion">
+            <!-- Education Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="educationHeadingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducationOne" aria-expanded="false" aria-controls="collapseEducationOne">
+                        Master of Science in Data Science (In Progress)
+                    </button>
+                </h2>
+                <div id="collapseEducationOne" class="accordion-collapse collapse" aria-labelledby="educationHeadingOne" data-bs-parent="#educationAccordion">
+                    <div class="accordion-body">
+                        <p><strong>University of Colorado at Boulder (2024 - present, projected completion period summer 2026)</strong></p>
+                        <p>Relevant Coursework: Advanced Statistical Methods, Machine Learning Algorithms, Big Data Analytics, Predictive Analytics</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Education Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="educationHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducationTwo" aria-expanded="false" aria-controls="collapseEducationTwo">
+                        Computer Science 
+                    </button>
+                </h2>
+                <div id="collapseEducationTwo" class="accordion-collapse collapse" aria-labelledby="educationHeadingTwo" data-bs-parent="#educationAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Murray State College (2001-2002, 2013-2014)</strong></p>
+                        <p>Microsoft Certification for 2007 server.</p>
+                        <p>Hands on with Microsoft Server 2007, Cisco 2600 router and switchs.</p>
+                        <p>A+ Certification</p>
+                        <p>GPA: 3.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="bg-light mt-4">
+    <div class="container">
+        <h2 class="text-center">Certifications</h2>
+        <div class="accordion" id="certificationsAccordion">
+            <!-- Certification Items -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="certificationsHeadingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCertifications" aria-expanded="false" aria-controls="collapseCertifications">
+                        Certifications List
+                    </button>
+                </h2>
+                <div id="collapseCertifications" class="accordion-collapse collapse" aria-labelledby="certificationsHeadingOne" data-bs-parent="#certificationsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Microsoft Certified: Azure Data Science Associate (Dec 2023)</li>
+                            <li>Microsoft Certified: Azure AI Engineer Associate (Dec 2023)</li>
+                            <li>Microsoft Certified: Azure AI Fundamentals (Oct 2023)</li>
+                            <li>Coursera Google: Advanced Data Analytics (Oct 2023)</li>
+                            <li>Coursera Google: Data Analytics Professional Certificate (Sep 2023)</li>
+                            <li>Coursera IBM: Applied AI Professional Certificate (Aug 2023)</li>
+                            <li>Coursera IBM: Data Analyst Professional Certificate (Aug 2023)</li>
+                            <li>Pearson Vue: A+ Computer Hardware</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Links Section -->
+<section id="links" class="bg-light mt-4">
+    <div class="container">
+        <h2 class="text-center">Links to Digital Badges & Profiles</h2>
+        <div class="accordion" id="linksAccordion">
+            <!-- Links Items -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="linksHeadingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLinks" aria-expanded="false" aria-controls="collapseLinks">
+                        Links List
+                    </button>
+                </h2>
+                <div id="collapseLinks" class="accordion-collapse collapse" aria-labelledby="linksHeadingOne" data-bs-parent="#linksAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="https://www.credly.com/users/denzil-james-greenwood">Credly</a></li>
+                            <li><a href="https://www.cloudskillsboost.google/public_profiles/a5c8e6b1-3405-4667-8473-3a8eea0a263e">Google Cloud Skills</a></li>
+                            <li><a href="https://learn.microsoft.com/en-us/users/jamesgreenwood-2117/credentials/certifications?tab=credentials-tab">Microsoft Learn MCID</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+    <!-- Contact Section -->
+        <section id="contact" class="bg-dark">
+            <div class="container">
+                <h2 class="text-center">Contact Me</h2>
+                <p class="text-center">Feel free to reach out if you'd like to discuss opportunities, collaboration, or any questions about my work.</p>
+                <div class="text-center">
+                    <a href="mailto:Denzil.James.Greenwood@outlook.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="https://www.linkedin.com/in/denzil-james-greenwood" class="btn btn-secondary"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+                    <a href="https://github.com/DJ-Greenwood" class="btn btn-secondary"><i class="fab fa-github"></i> Follow on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        // Show Back to Top button when scrolling down
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
