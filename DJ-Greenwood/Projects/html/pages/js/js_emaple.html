@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+</head>
+<body>
+    <h1>JavaScript Examples</h1>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        // Example 1: Basic JavaScript Syntax
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+        console.log(greet("World"));
+
+        // Example 2: Working with Arrays
+        let fruits = ["Apple", "Banana", "Cherry"];
+        fruits.push("Date");
+        console.log(fruits);
+
+        // Example 3: Using Objects
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        console.log(person.fullName());
+
+        // Example 4: Looping through an Array
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        // Example 5: Conditional Statements
+        let number = 10;
+        if (number > 5) {
+            console.log("Number is greater than 5");
+        } else {
+            console.log("Number is 5 or less");
+        }
+
+        // Example 6: Event Handling in the Browser
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('myButton').addEventListener('click', function() {
+                alert('Button was clicked!');
+            });
+        });
+
+        // Example 7: Working with Promises
+        let promise = new Promise((resolve, reject) => {
+            let success = true;
+            if (success) {
+                resolve("Promise resolved successfully!");
+            } else {
+                reject("Promise rejected.");
+            }
+        });
+
+        promise.then((message) => {
+            console.log(message);
+        }).catch((message) => {
+            console.log(message);
+        });
+    </script>
+</body>
+</html>
