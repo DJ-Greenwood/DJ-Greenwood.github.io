@@ -81,8 +81,26 @@ footer {
 .continer py-5 {
     padding: 5rem 0;
 }
+
+.content-contatiner{
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px auto;
+    border-radius: 10px;
+    background: #228cf5;
+    color: #3599e1;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+}
+
+.content-contatiner h2{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .code-container {
-    background: #f8f9fa;
+    background: #87abce;
+    color: #0a5dbb;
     padding: 20px;
     border-radius: 5px;
     overflow-x: auto;
