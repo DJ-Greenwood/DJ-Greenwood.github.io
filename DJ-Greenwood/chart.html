@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.6.0/Recharts.min.js" crossorigin></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #financial-chart {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Financial Dashboard</h1>
+        <div id="financial-dashboard" class="row">
+            <!-- Stock cards will be dynamically inserted here -->
+        </div>
+
+        <h2 class="text-center mt-5">Stock Trends</h2>
+        <div id="financial-chart">
+            <!-- Chart will be rendered here -->
+        </div>
+    </div>
+
+    <script>
+        // Example JSON data for debugging
+        const exampleJson = {
+            "stock_data": {
+                "stocks": [
+                    {
+                        "ticker": "AAPL",
+                        "daily_data": [
+                            { "date": "2024-01-18", "open": 185.18, "close": 187.71, "high": 188.22, "low": 184.92, "daily change": 2.53 },
+                            { "date": "2024-01-17", "open": 184.30, "close": 185.18, "high": 186.00, "low": 183.50, "daily change": 1.00 }
+                        ]
+                    },
+                    {
+                        "ticker": "MSFT",
+                        "daily_data": [
+                            { "date": "2024-01-18", "open": 320.15, "close": 322.50, "high": 323.00, "low": 319.00, "daily change": 2.35 },
+                            { "date": "2024-01-17", "open": 318.10, "close": 320.15, "high": 321.50, "low": 317.00, "daily change": 2.05 }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        // Function to load and render financial dashboard
+        async function loadFinancialDashboard() {
+            const dashboardContainer = document.getElementById("financial-dashboard");
+
+            try {
+                // Use example JSON for debugging
+                const data = await fetch("DJ-Greenwood/Projects/StocksData/top_stocks_data.json")
+                    .then(response => response.json())
+                    .catch(() => exampleJson); // Fallback to example JSON if fetch fails
+
+                // Populate dashboard with latest stock data
+                dashboardContainer.innerHTML = data.stock_data.stocks
+                    .map(stock => {
+                        // Sort daily data by date (descending) and get the latest entry
+                        const latestData = stock.daily_data.sort(
+                            (a, b) => new Date(b.date) - new Date(a.date)
+                        )[0];
+
+                        return `
+                            <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">${stock.ticker}</h5>
+                                        <p class="card-text">Open Price: $${latestData.open.toFixed(2)}</p>
+                                        <p class="card-text">Close Price: $${latestData.close.toFixed(2)}</p>
+                                        <p class="card-text">Daily Change: ${latestData["daily change"].toFixed(2)}%</p>
+                                        <p class="card-text">High: $${latestData.high.toFixed(2)}</p>
+                                        <p class="card-text">Low: $${latestData.low.toFixed(2)}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    })
+                    .join("");
+            } catch (error) {
+                dashboardContainer.innerHTML = `<p class="text-danger">Failed to load financial data. Please try again later.</p>`;
+                console.error("Error fetching financial data:", error);
+            }
+        }
+
+        // Function to load and render stock trends chart
+        async function loadStockTrendsChart() {
+            const ctx = document.getElementById('financial-chart').getContext('2d');
+
+            try {
+                 // Use example JSON for debugging
+                 const data = await fetch("DJ-Greenwood/Projects/StocksData/top_stocks_data.json")
+                    .then(response => response.json())
+                    .catch(() => exampleJson); // Fallback to example JSON if fetch fails
+
+                // Group data by stock
+                const stocksData = data.stock_data.stocks.reduce((acc, stock) => {
+                    acc[stock.ticker] = {
+                        dates: stock.daily_data.map(day => day.date),
+                        prices: stock.daily_data.map(day => day.close)
+                    };
+                    return acc;
+                }, {});
+
+                // Create datasets for each stock
+                const datasets = Object.entries(stocksData).map(([ticker, data], index) => ({
+                    label: ticker,
+                    data: data.prices,
+                    borderColor: getColor(index),
+                    fill: false,
+                    tension: 0.1
+                }));
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: stocksData[Object.keys(stocksData)[0]].dates,
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        },
+                        scales: {
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Price ($)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Date'
+                                }
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading chart:', error);
+            }
+        }
+
+        // Helper function to generate colors
+        function getColor(index) {
+            const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'];
+            return colors[index % colors.length];
+        }
+
+        // Load data when DOM is ready
+        document.addEventListener("DOMContentLoaded", () => {
+            loadFinancialDashboard();
+            loadStockTrendsChart();
+        });
+    </script>
+</body>
+</html>

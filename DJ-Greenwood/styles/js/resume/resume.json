@@ -1,0 +1,94 @@
+{
+    "name": "Denzil J. Greenwood",
+    "contact": {
+      "email": "denzil.james.greenwood@outlook.com",
+      "phone": "580.276.6038",
+      "address": "610 Peak St. Marietta, OK 73448"
+    },
+    "summary": "Results-driven data analyst with extensive background in project management, compliance, data analytics, and a special interest in AI and data science. Demonstrated success in driving process improvements, optimizing operational efficiencies, and influencing strategic business decisions.",
+    "skills": [
+      "Risk Management",
+      "Strategic Planning",
+      "Team Leadership",
+      "Data-Driven Decision-Making",
+      "Regulatory Compliance",
+      "Auditing",
+      "Change Management",
+      "Office Administration",
+      "Database Management",
+      "Data Visualization",
+      "Exploratory Data Analysis"
+    ],
+    "programming_languages":
+    [
+        {
+          "name": "Python",
+          "libraries": [
+            "NumPy", "Pandas", "Flask", "Scikit-Learn", "Matplotlib",
+            "Seaborn", "Plotly", "Streamlit", "PyTorch", "TensorFlow",
+            "Django", "BeautifulSoup", "Scrapy"
+          ]
+        },
+        { "name": "Java" },
+        { "name": "R" },
+        { "name": "SQL" },
+        { "name": "JavaScript" },
+        { "name": "HTML" },
+        { "name": "CSS" }
+    ],    
+    "education": {
+      "university": "University of Colorado Boulder",
+      "degree": "Master’s of Science – Data Science",
+      "graduation_date": "Anticipated 2026"
+    },
+    "certifications": [
+      {
+        "name": "Azure Data Science Associate",
+        "year": 2023
+      },
+      {
+        "name": "Azure AI Engineer Associate",
+        "year": 2023
+      },
+      {
+        "name": "Azure AI Fundamentals",
+        "year": 2023
+      }
+    ],
+    "experience": [
+      {
+        "title": "Volunteer Project Manager",
+        "company": "Self-Employed",
+        "year": "2024",
+        "responsibilities": [
+          "Planned and executed home renovation projects, effectively meeting deadlines and budgets",
+          "Managed end-to-end project delivery with top quality results",
+          "Successfully managed complex logistical and financial challenges"
+        ]
+      },
+      {
+        "title": "Implementation Support Supervisor",
+        "company": "Chickasaw Nation",
+        "years": "2013 – 2014",
+        "responsibilities": [
+          "Implemented and drove adoption of enterprise projects requiring interdepartmental collaboration",
+          "Leveraged data analytics to track progress and performance of key projects",
+          "Supported decision-making and improved operational efficiencies with data-driven insights",
+          "Assisted in the development of the Implementation Support Department"
+        ]
+      },
+      {
+        "title": "Compliance Specialist",
+        "company": "Chickasaw Nation",
+        "years": "2007 – 2013",
+        "responsibilities": [
+          "Developed efficient reporting system for quarterly audit reports",
+          "Conducted comprehensive audits to ensure compliance with regulatory standards",
+          "Improved business processes based on successful data analysis",
+          "Developed and presented detailed reports and recommendations to senior leaders, resulting in enhanced operational effectiveness",
+          "Conducted risk assessments to identify gaps in operational controls"
+        ]
+      }
+    ]
+  }
+  

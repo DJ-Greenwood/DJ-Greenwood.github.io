@@ -69,6 +69,18 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+.continer{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.continer my-5 {
+    margin: 5rem 0;
+}
+.continer py-5 {
+    padding: 5rem 0;
+}
 .code-container {
     background: #f8f9fa;
     padding: 20px;
@@ -81,24 +93,108 @@ pre {
     padding: 15px;
     border-radius: 5px;
 }
+.content-contatiner{
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px auto;
+    border-radius: 10px;
+    background: #228cf5;
+    color: #3599e1;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+}
+.card{
+    color: #18657f;
+    box-shadow: 0 4px 8px rgba(73, 84, 93, 0.1);
+    border-radius: 10px 10px;
+    padding: 20px auto;
+    transition: transform 0.3s;
+}
 .card:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
 }
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.card h3 {
+    margin: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
 .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
     display: none;
-    background: #00bfff;
+    position: fixed;
+    bottom: 7px;
+    right: 7px;
+    background: #127de8;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 10px 30px; /* Adjust padding for oval shape */
+    border-radius: 10px; /* Ensure it becomes an oval */
+    font-size: 16px; /* Adjust the text size */
+    cursor: pointer; /* Add a pointer cursor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+    transition: background 0.3s ease; /* Smooth background transition on hover */
 }
+
 .back-to-top:hover {
-    background: #007bff;
+    background: #0a5dbb; /* Slightly darker color on hover */
 }
+
 .modal-content img {
     width: 100%;
 }
+/* Accordion */
+.accordion {
+    background: #f8f9fa;
+    box-shadow: #333;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.accordion-item {
+    border: none;
+}
+.accordion-header {
+    background: #e9ecef;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#web-apps .card {
+    transition: transform 0.2s;
+    border: 1px solid rgba(0,0,0,0.125);
+}
+
+#web-apps .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#web-apps .badge {
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+}
+
+#web-apps .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.chart-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .chart-container svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .chart-container {
+      height: 300px;
+    }
+  }
+
