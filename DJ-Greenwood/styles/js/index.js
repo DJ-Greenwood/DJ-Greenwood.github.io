@@ -148,7 +148,7 @@ async function loadResumeData() {
 
         // Populate Education
         if (data.education) {
-            document.getElementById("education-details").textContent = `${data.education.university}, ${data.education.degree} (Expected: ${data.education.graduation_date})`;
+            document.getElementById("education-details").textContent = `${data.education.university}, ${data.education.degree}, ${data.education.graduation_date}`;
         } else {
             console.warn("Education data is missing");
         }
